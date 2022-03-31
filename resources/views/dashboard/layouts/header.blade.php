@@ -25,7 +25,7 @@ class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow"
     <div class="nav-item text-nowrap">
         <form action="/logout" method="POST">
             @csrf
-            <button class="nav-link px-3 bg-dark border-0" type="submit"><i class="bi bi-box-arrow-right"></i> Logout</button>
+            <button class="nav-link px-3 bg-dark border-0" type="submit"><span data-feather="log-out"></span>  Logout</button>
         </form>
     </div>
 </div>
