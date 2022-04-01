@@ -8,6 +8,7 @@ class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-cente
 </div>
 
 <div class="table-responsive">
+    <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Create New post</a>
     <table class="table table-striped table-sm">
       <thead>
         <tr>

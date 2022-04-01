@@ -30,8 +30,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 // });
 Route::get('/', function () {
     return view('home', [
-        "title" => "Home",
-        'active' => 'home'
+        "title" => "Home"
     ]);
 });
 
@@ -94,6 +93,8 @@ Route::get('/dashboard', function() {
 })->middleware('auth');
 
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+
+// Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug']);
 
 
 
