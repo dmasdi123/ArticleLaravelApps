@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->string('title');
             $table->string('slug')->nullable();
+            $table->string('image')->nullable();
             // $table->string('slug');
             $table->text('excerpt');
             $table->text('body')->nullable();

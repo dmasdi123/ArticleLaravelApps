@@ -8,7 +8,7 @@ class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-cente
 </div>
 
 <div class="col-lg-8">
-    <form action="/dashboard/posts" method="POST">
+    <form action="/dashboard/posts" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
           <label for="title" class="form-label">Title</label>
@@ -36,6 +36,13 @@ class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-cente
             @endforeach
           </select>
         </div>
+        <div class="mb-3">
+          <label for="image" class="form-label">Image</label>
+          <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image">
+        </div>
+        @error('image')
+        <p class="text-danger">{{ $message }}</p>
+        @enderror
         <div class="mb-3">
           <label for="body" class="form-label">Body</label>
           @error('body')
